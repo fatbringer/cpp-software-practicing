@@ -18,7 +18,7 @@ int main() {
 int max_of_four(int a, int b, int c, int d) {
     return max(max(max(a,b),c),d);
 }
-
+// PLEASE TAKE NOTE THE max(a,b) function can only accept 2 arguments!!!
 
 /*
 Functions are a bunch of statements glued together. A function is provided with zero or more arguments, and it executes the statements on it. Based on the return type, it either returns nothing (void) or something.
