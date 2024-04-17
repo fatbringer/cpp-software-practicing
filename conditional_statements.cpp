@@ -1,3 +1,80 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+
+int main()
+{
+    string n_temp;  //This line declares a string variable named n_temp.
+    getline(cin, n_temp);
+    // This line uses the getline() function to read a line of input from the standard input stream (cin) and store it in the n_temp variable.
+    // The getline() function reads the input until it encounters a newline character (\n) or reaches the end of the input stream.
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+        switch (n) {
+        case 1:
+            cout << "one" << endl;
+            break;
+        case 2:
+            cout << "two" << endl;
+            break;
+        case 3:
+            cout << "three" << endl;
+            break;
+        case 4:
+            cout << "four" << endl;
+            break;
+        case 5:
+            cout << "five" << endl;
+            break;
+        case 6:
+            cout << "six" << endl;
+            break;
+        case 7:
+            cout << "seven" << endl;
+            break;
+        case 8:
+            cout << "eight" << endl;
+            break;
+        case 9:
+            cout << "nine" << endl;
+            break;
+        default:
+            cout << "Greater than 9" << endl;
+            break;
+    }
+    
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
+
+
 /*
 if and else are two of the most frequently used conditionals in C/C++, and they enable you to execute zero or one conditional statement among many such dependent conditional statements. We use them in the following ways:
 
@@ -80,77 +157,3 @@ Explanation 2
 */
 
 
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
-string ltrim(const string &);
-string rtrim(const string &);
-
-
-int main()
-{
-    string n_temp;
-    getline(cin, n_temp);
-
-    int n = stoi(ltrim(rtrim(n_temp)));
-
-        switch (n) {
-        case 1:
-            cout << "one" << endl;
-            break;
-        case 2:
-            cout << "two" << endl;
-            break;
-        case 3:
-            cout << "three" << endl;
-            break;
-        case 4:
-            cout << "four" << endl;
-            break;
-        case 5:
-            cout << "five" << endl;
-            break;
-        case 6:
-            cout << "six" << endl;
-            break;
-        case 7:
-            cout << "seven" << endl;
-            break;
-        case 8:
-            cout << "eight" << endl;
-            break;
-        case 9:
-            cout << "nine" << endl;
-            break;
-        default:
-            cout << "Greater than 9" << endl;
-            break;
-    }
-    
-
-    return 0;
-}
-
-string ltrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
-
-    return s;
-}
-
-string rtrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
-
-    return s;
-}
