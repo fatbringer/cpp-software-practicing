@@ -1,3 +1,26 @@
+
+
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    int a;
+    long b;
+    char ch;
+    float fl;
+    double dbl;
+    
+    scanf("%d %ld %c %f %lf", &a, &b, &ch, &fl, &dbl);
+    printf("%d\n", a);
+    printf("%ld\n", b);
+    printf("%c\n", ch);
+    printf("%.3f\n", fl);
+    printf("%.9lf\n", dbl);
+    return 0;
+}
+
+
 /*
 Some C++ data types, their format specifiers, and their most common bit widths are as follows:
 
@@ -56,24 +79,3 @@ followed by double .
 
 */
 
-
-
-#include <iostream>
-#include <cstdio>
-using namespace std;
-
-int main() {
-    int a;
-    long b;
-    char ch;
-    float fl;
-    double dbl;
-    
-    scanf("%d %ld %c %f %lf", &a, &b, &ch, &fl, &dbl);
-    printf("%d\n", a);
-    printf("%ld\n", b);
-    printf("%c\n", ch);
-    printf("%.3f\n", fl);
-    printf("%.9lf\n", dbl);
-    return 0;
-}
