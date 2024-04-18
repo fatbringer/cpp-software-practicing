@@ -25,6 +25,7 @@ int main() {
         int arridx, membidx; 
         cin >> arridx >> membidx;
         cout << vectorOfArrays[arridx].at(membidx) << endl;
+        // cout << vectorOfArrays[arridx][membidx] << endl; // this works as well
     }
       
     return 0;
